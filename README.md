@@ -23,13 +23,10 @@ Still works, but attended:
 curl -O https://raw.githubusercontent.com/zuroxx/wireguard-install/master/wireguard-install.sh && chmod +x wireguard-install.sh && ./wireguard-install.sh
 ```
 
+## Credits
 
-
-
-
---
-Credits:
 https://github.com/angristan/wireguard-install
 
 
-Changes: Cloudflare, Google DNS Servers set on IPv4. User input disabled.
+## Changes
+Cloudflare, Google DNS Servers set on IPv4. User input disabled.

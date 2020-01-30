@@ -10,6 +10,11 @@ Supported distributions:
 - Debian
 - Centos
 
+Still works, but attended:
+
+- Arch
+- Fedora
+
 ## Usage
 
 First, get the script and make it executable :

@@ -20,12 +20,9 @@ Still works, but attended:
 First, get the script and make it executable :
 
 ```bash
-curl -O https://raw.githubusercontent.com/zuroxx/wireguard-install/master/wireguard-install.sh
-chmod +x wireguard-install.sh
+curl -O https://raw.githubusercontent.com/zuroxx/wireguard-install/master/wireguard-install.sh && chmod +x wireguard-install.sh && ./wireguard-install.sh
 ```
-```sh
-./wireguard-install.sh
-```
+
 
 Credits:
 https://github.com/angristan/wireguard-install

@@ -17,7 +17,7 @@ Still works, but attended:
 
 ## Usage
 
-First, get the script and make it executable :
+(1) get the script (2) make it executable (3) execute :
 
 ```bash
 curl -O https://raw.githubusercontent.com/zuroxx/wireguard-install/master/wireguard-install.sh && chmod +x wireguard-install.sh && ./wireguard-install.sh

@@ -29,3 +29,6 @@ Then run it :
 
 Credits:
 https://github.com/angristan/wireguard-install
+
+
+Changes: Cloudflare, Google DNS Servers set on IPv4. User input disabled.

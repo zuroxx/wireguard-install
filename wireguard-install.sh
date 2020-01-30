@@ -36,40 +36,40 @@ fi
 
 # Detect public IPv4 address and pre-fill for the user
 SERVER_PUB_IPV4=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
-read -rp "IPv4 or IPv6 public address: " -e -i "$SERVER_PUB_IPV4" SERVER_PUB_IP
+# read -rp "IPv4 or IPv6 public address: " -e -i "$SERVER_PUB_IPV4" SERVER_PUB_IP
 
 # Detect public interface and pre-fill for the user
 SERVER_PUB_NIC="$(ip -4 route ls | grep default | grep -Po '(?<=dev )(\S+)' | head -1)"
-read -rp "Public interface: " -e -i "$SERVER_PUB_NIC" SERVER_PUB_NIC
+# read -rp "Public interface: " -e -i "$SERVER_PUB_NIC" SERVER_PUB_NIC
 
 SERVER_WG_NIC="wg0"
-read -rp "WireGuard interface name: " -e -i "$SERVER_WG_NIC" SERVER_WG_NIC
+# read -rp "WireGuard interface name: " -e -i "$SERVER_WG_NIC" SERVER_WG_NIC
 
 SERVER_WG_IPV4="10.66.66.1"
-read -rp "Server's WireGuard IPv4 " -e -i "$SERVER_WG_IPV4" SERVER_WG_IPV4
+# read -rp "Server's WireGuard IPv4 " -e -i "$SERVER_WG_IPV4" SERVER_WG_IPV4
 
 SERVER_WG_IPV6="fd42:42:42::1"
-read -rp "Server's WireGuard IPv6 " -e -i "$SERVER_WG_IPV6" SERVER_WG_IPV6
+# read -rp "Server's WireGuard IPv6 " -e -i "$SERVER_WG_IPV6" SERVER_WG_IPV6
 
 SERVER_PORT=1194
-read -rp "Server's WireGuard port " -e -i "$SERVER_PORT" SERVER_PORT
+# read -rp "Server's WireGuard port " -e -i "$SERVER_PORT" SERVER_PORT
 
 CLIENT_WG_IPV4="10.66.66.2"
-read -rp "Client's WireGuard IPv4 " -e -i "$CLIENT_WG_IPV4" CLIENT_WG_IPV4
+# read -rp "Client's WireGuard IPv4 " -e -i "$CLIENT_WG_IPV4" CLIENT_WG_IPV4
 
 CLIENT_WG_IPV6="fd42:42:42::2"
-read -rp "Client's WireGuard IPv6 " -e -i "$CLIENT_WG_IPV6" CLIENT_WG_IPV6
+# read -rp "Client's WireGuard IPv6 " -e -i "$CLIENT_WG_IPV6" CLIENT_WG_IPV6
 
 # Adguard DNS by default
 CLIENT_DNS_1="176.103.130.130"
-read -rp "First DNS resolver to use for the client: " -e -i "$CLIENT_DNS_1" CLIENT_DNS_1
+# read -rp "First DNS resolver to use for the client: " -e -i "$CLIENT_DNS_1" CLIENT_DNS_1
 
 CLIENT_DNS_2="176.103.130.131"
-read -rp "Second DNS resolver to use for the client: " -e -i "$CLIENT_DNS_2" CLIENT_DNS_2
+# read -rp "Second DNS resolver to use for the client: " -e -i "$CLIENT_DNS_2" CLIENT_DNS_2
 
 # Ask for pre-shared symmetric key
 IS_PRE_SYMM="y"
-read -rp "Want to use pre-shared symmetric key? [Y/n]: " -e -i "$IS_PRE_SYMM" IS_PRE_SYMM
+# read -rp "Want to use pre-shared symmetric key? [Y/n]: " -e -i "$IS_PRE_SYMM" IS_PRE_SYMM
 
 if [[ $SERVER_PUB_IP =~ .*:.* ]]
 then

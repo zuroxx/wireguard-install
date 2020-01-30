@@ -15,6 +15,10 @@ Still works, but attended:
 - Arch
 - Fedora
 
+## Host
+
+Prefeably a cloud host running KVM such as Google, AWS, Vultr. Digital Ocean is not recommended for a VPN due to continious DMCA disconnects.
+
 ## Usage
 
 (1) get the script (2) make it executable (3) execute :

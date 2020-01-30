@@ -83,27 +83,20 @@ fi
 # Install WireGuard tools and module
 if [[ "$OS" = 'ubuntu' ]]; then
     apt-get install -y software-properties-common
-    add-apt-repository ppa:wireguard/wireguard
-    apt-get update
+    add-apt-repository ppa:wireguard/wireguard -y
+    apt-get update -y
     apt-get install -y "linux-headers-$(uname -r)"
     apt-get install -y wireguard iptables resolvconf
 elif [[ "$OS" = 'debian' ]]; then
     echo "deb http://deb.debian.org/debian/ unstable main" > /etc/apt/sources.list.d/unstable.list
     printf 'Package: *\nPin: release a=unstable\nPin-Priority: 90\n' > /etc/apt/preferences.d/limit-unstable
-    apt update
+    apt update -y 
     apt-get install -y "linux-headers-$(uname -r)"
-    apt install wireguard iptables resolvconf
-elif [[ "$OS" = 'fedora' ]]; then
-    dnf copr enable jdoss/wireguard
-    dnf install wireguard-dkms wireguard-tools iptables
+    apt install -y wireguard iptables resolvconf
 elif [[ "$OS" = 'centos' ]]; then
     curl -Lo /etc/yum.repos.d/wireguard.repo https://copr.fedorainfracloud.org/coprs/jdoss/wireguard/repo/epel-7/jdoss-wireguard-epel-7.repo
-    yum install epel-release
-    yum install wireguard-dkms wireguard-tools iptables
-elif [[ "$OS" = 'arch' ]]; then
-    pacman -S linux-headers
-    pacman -S wireguard-tools iptables wireguard-arch
-fi
+    yum install -y epel-release
+    yum install -y wireguard-dkms wireguard-tools iptables
 
 # Make sure the directory exists (this does not seem the be the case on fedora)
 mkdir /etc/wireguard > /dev/null 2>&1

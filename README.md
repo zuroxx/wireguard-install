@@ -24,6 +24,10 @@ curl -O https://raw.githubusercontent.com/zuroxx/wireguard-install/master/wiregu
 ```
 
 
+
+
+
+
 Credits:
 https://github.com/angristan/wireguard-install
 

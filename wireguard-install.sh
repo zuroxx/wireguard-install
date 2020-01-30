@@ -79,8 +79,7 @@ else
   echo "IPv4 Detected"
   ENDPOINT="$SERVER_PUB_IP:$SERVER_PORT"
 fi
-
-# Install WireGuard tools and module
+  # Install WireGuard tools and module
 if [[ "$OS" = 'ubuntu' ]]; then
     apt-get install -y software-properties-common
     add-apt-repository ppa:wireguard/wireguard -y
@@ -93,10 +92,17 @@ elif [[ "$OS" = 'debian' ]]; then
     apt update -y 
     apt-get install -y "linux-headers-$(uname -r)"
     apt install -y wireguard iptables resolvconf
+elif [[ "$OS" = 'fedora' ]]; then
+    dnf copr enable jdoss/wireguard
+    dnf install wireguard-dkms wireguard-tools iptables
 elif [[ "$OS" = 'centos' ]]; then
     curl -Lo /etc/yum.repos.d/wireguard.repo https://copr.fedorainfracloud.org/coprs/jdoss/wireguard/repo/epel-7/jdoss-wireguard-epel-7.repo
     yum install -y epel-release
     yum install -y wireguard-dkms wireguard-tools iptables
+elif [[ "$OS" = 'arch' ]]; then
+    pacman -S linux-headers
+    pacman -S wireguard-tools iptables wireguard-arch
+fi
 
 # Make sure the directory exists (this does not seem the be the case on fedora)
 mkdir /etc/wireguard > /dev/null 2>&1

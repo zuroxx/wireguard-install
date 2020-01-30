@@ -103,6 +103,7 @@ elif [[ "$OS" = 'centos' ]]; then
 elif [[ "$OS" = 'arch' ]]; then
     pacman -S linux-headers
     pac
+fi
 
 # Make sure the directory exists (this does not seem the be the case on fedora)
 mkdir /etc/wireguard > /dev/null 2>&1

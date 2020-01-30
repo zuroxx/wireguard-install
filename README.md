@@ -17,7 +17,7 @@ Still works, but attended:
 
 ## Host
 
-Prefeably a cloud host running KVM such as Google, AWS, Vultr. Digital Ocean is not recommended for a VPN due to continual DMCA disconnects.
+Prefeably a cloud host running KVM such as Google, AWS, Vultr. Digital Ocean is not recommended for a VPN due to continual DMCA disconnects from false positives.
 
 ## Usage
 

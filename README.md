@@ -8,9 +8,7 @@ Supported distributions:
 
 - Ubuntu
 - Debian
-- Fedora
 - Centos
-- Arch Linux
 
 ## Usage
 

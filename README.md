@@ -1,6 +1,6 @@
 # Unattended WireGuard installer
 
-Easily set up a dual-stack [WireGuard](https://www.wireguard.com/) VPN on a Linux server without touching the console.
+Easily set up a dual-stack [WireGuard](https://www.wireguard.com/) VPN on a Linux server without touching the console. ©Automate the effect.
 
 ## Requirements
 

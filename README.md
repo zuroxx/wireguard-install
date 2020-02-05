@@ -37,10 +37,11 @@ sudo User:
 curl -O https://raw.githubusercontent.com/zuroxx/wireguard-install/master/wireguard-install.sh && sudo chmod +x wireguard-install.sh && sudo ./wireguard-install.sh
 ```
 
-## Credits
-
-https://github.com/angristan/wireguard-install
-
 
 ## Changes
 Cloudflare, Google DNS Servers set on IPv4. User input disabled.
+
+
+## Credits
+
+https://github.com/angristan/wireguard-install

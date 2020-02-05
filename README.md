@@ -21,10 +21,18 @@ Prefeably a cloud host running KVM such as GCP, AWS, Vultr. Check for the egress
 
 ## Usage
 
+ROOT User:
 (1) get the script (2) make it executable (3) execute :
 
 ```bash
 curl -O https://raw.githubusercontent.com/zuroxx/wireguard-install/master/wireguard-install.sh && chmod +x wireguard-install.sh && ./wireguard-install.sh
+```
+
+sudo User:
+(1) get the script (2) make it executable (3) execute :
+
+```bash
+curl -O https://raw.githubusercontent.com/zuroxx/wireguard-install/master/wireguard-install.sh && sudo chmod +x wireguard-install.sh && sudo ./wireguard-install.sh
 ```
 
 ## Credits

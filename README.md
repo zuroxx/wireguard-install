@@ -39,7 +39,7 @@ curl -O https://raw.githubusercontent.com/zuroxx/wireguard-install/master/wiregu
 
 
 ## Changes
-Cloudflare, Google DNS Servers set on IPv4. User input disabled.
+Cloudflare, Google DNS Servers set on IPv4. User input disabled. Added RedHat support.
 
 
 ## Credits

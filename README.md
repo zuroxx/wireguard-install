@@ -17,7 +17,7 @@ Still works, but attended:
 
 ## Host
 
-Prefeably a cloud host running KVM such as GCP, AWS, and Vultr (actual unlimited bandwidth), for examples. Check for the egress costs of your host. Also Azure, I switch to their, "Standard B1ls (1 vcpus, 0.5 GiB memory)" after installing on a higher resource VM, it can be a cost effective option. Digital Ocean is not recommended for a VPN due to continual DMCA disconnects from false positives. 
+Prefeably a cloud host running KVM such as GCP, AWS, and Vultr (actual unlimited bandwidth), for examples. Check for the egress costs of your host. Also Azure, I switch to their, "Standard B1ls (1 vcpus, 0.5 GiB memory)" after installing on a higher resource VM, it can be a cost effective option. Digital Ocean is not recommended for a VPN due to continual DMCA disconnects from false positives. LXC is not supported (yet).
 
 ## Usage
 

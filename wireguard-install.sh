@@ -6,12 +6,12 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 if [ "$(systemd-detect-virt)" == "openvz" ]; then
-    echo "OpenVZ is not supported"
+    echo "OpenVZ is not supported. Try KVM"
     exit
 fi
 
 if [ "$(systemd-detect-virt)" == "lxc" ]; then
-    echo "LXC is not supported (yet)."
+    echo "LXC is not supported (yet). Try KVM"
     echo "WireGuard can technically run in an LXC container,"
     echo "but the kernel module has to be installed on the host,"
     echo "the container has to be run with some specific parameters"

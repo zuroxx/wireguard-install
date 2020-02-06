@@ -9,6 +9,7 @@ Supported distributions:
 - Ubuntu
 - Debian
 - Centos
+- RedHat
 
 Still works, but attended:
 

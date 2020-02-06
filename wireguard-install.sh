@@ -29,6 +29,8 @@ elif [[ -e /etc/centos-release ]]; then
     OS=centos
 elif [[ -e /etc/arch-release ]]; then
     OS=arch
+elif [[ -e /etc/redhat-release ]]; then
+    OS=redhat
 else
     echo "Looks like you aren't running this installer on a Debian, Ubuntu, Fedora, CentOS or Arch Linux system"
     exit 1
@@ -103,6 +105,10 @@ elif [[ "$OS" = 'centos' ]]; then
 elif [[ "$OS" = 'arch' ]]; then
     pacman -S linux-headers
     pac
+elif [[ "$OS" = 'redhat' ]]; then
+    curl -Lo /etc/yum.repos.d/wireguard.repo https://copr.fedorainfracloud.org/coprs/jdoss/wireguard/repo/epel-7/jdoss-wireguard-epel-7.repo
+    yum install -y epel-release
+    yum install -y wireguard-dkms wireguard-tools iptables
 fi
 
 # Make sure the directory exists (this does not seem the be the case on fedora)

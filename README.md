@@ -7,7 +7,7 @@ Easily set up a dual-stack [WireGuard](https://www.wireguard.com/) VPN on a Linu
 Supported distributions:
 
 - Ubuntu
-- Debian
+- Debian <=v.9
 - Centos
 - RedHat
 

@@ -22,6 +22,8 @@ Prefeably a cloud host running KVM such as GCP, AWS, and Vultr (actual unlimited
 
 ## Usage
 
+First install cURL
+
 root User:
 
 (1) get the script (2) make it executable (3) execute :
